@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    opacity: 0.8;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0px;
+    padding: 0 30px;
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+    color: white;
+    padding: 0 30px;
+    justify-content: space-between;
+}
+
+.navbar a{
+    color: white;
+    list-style: none;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+}
+
+.navbar-image{
+    background: url(../MattsDiner/images/main.jpg) no-repeat center center/cover;
+    height: 70vh;
+    position: relative;
+    color: white;
+    display: grid;
+}
+
+/* container pics */
+
+.grid{
+    display: grid;
+    background-color: black;
+    grid-template-columns: repeat(3,1fr);  /*this is key for stretching */
+    padding-top: 10px;
+}
+
+img{
+    width: 100%;
+    height: 250px;
+    padding: 8px 8px;
+    align-self: center;
+    object-fit: cover;
+}
+
+/*hours and location page*/
+
+.container-2{
+    display: flex;
+    background-color: black;
+    padding-top: 20%;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10%;
+    height: 100vh;
+}
+
+.container-2 h1, .location, .hours{
+    color: white;
+    line-height: 30px;
+    padding-bottom: 20px;
+}
+
+/* about page */
+
+.container-3{
+    display: flex;
+    background-color: black;
+    height: 100vh;
+    align-items: center;
+}
+
+.container-3 .column{
+    color: white;
+    padding: 20px;
+    width: 50%;
+}
+
+.container-3 img{
+    height: 700px;
+}
+
+.container-3 p{
+    line-height: 25px;
+    padding-bottom: 25px;
+}
+
+.container-3 h1{
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+/* menu image */
+
+.container-menu{
+    display: flex;
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+}
+
+.container-menu img{
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* mobile index page*/
+@media(max-width: 768px){
+    .navbar {
+        flex-direction: column;
+        height: 120px;
+    }
+
+    .navbar a{
+        padding: 10px 10px;
+    }
+
+    .grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .container-2 h1, .location, .hours{
+        padding-top: 50px;
+    }
+
+    .container-3{
+        flex-direction: column;
+        height: 100%;
+        padding-top: 175px;
+        justify-content: center;
+    }
+
+    .container-3 .column{
+        color: white;
+        width: 300px;
+    }
+
+    .container-3 img{
+        height: 400px;
+        width: 100%;
+    }
+
+    .container-3 p{
+        text-align: center;
+        line-height: 25px;
+        padding-bottom: 20px;
+    }
+
+    .container-menu img{
+        padding-top: 80px;
+        width: 100%;
+        height: 80%;
+    }
+}
+
+/* ipad pro*/
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+    .navbar {
+        flex-direction: column;
+        height: 120px;
+    }
+
+    .navbar a{
+        padding: 10px 10px;
+        margin: 0 3px;
+    }
+
+    .item9{
+        display: none;
+    }
+
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+  }
